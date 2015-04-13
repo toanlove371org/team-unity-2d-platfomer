@@ -14,6 +14,7 @@ TagManager:
   - ExplosionFX
   - HealthBar
   - EnemyBullet
+  - ItemPickup
   layers:
   - Default
   - TransparentFX

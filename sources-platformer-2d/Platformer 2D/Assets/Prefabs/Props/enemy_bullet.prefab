@@ -189,6 +189,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 100000, guid: 42404bf7d14c342f69690c9961a7530d, type: 2}
+  speed: 10
+  damage: 1
+  cooldown: 1
+  lifeTime: 1
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

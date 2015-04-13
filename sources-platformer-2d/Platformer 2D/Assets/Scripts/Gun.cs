@@ -3,134 +3,51 @@ using System.Collections;
 
 public class Gun : MonoBehaviour
 {
-	private PlayerControl playerCtrl;		// Reference to the PlayerControl script.
-	private Animator anim;					// Reference to the Animator component.
-
-
-	#region GunFather
 	public GameObject bullet; 
-	public float speed = 2.5f;
-	public float cooldown = 1f;
-	public float direction = 45f;
-	public float damage = 5.0f;
+	public float speedGun = 1f;		// 
+	public float cooldownGun = 1f; 	// 
+	public float direction = 0f;	// in degree
+	public float damageGun = 1f;	// 
 	
-	private bool isRapidFire = true;
+	protected bool isRapidFire = false;
 	private float cooldownTick = 0;
 	private float FPS = 60f;
-	#endregion
+	private Bullet bulletScript;
+	private float cooldown;
 
-	void Awake()
-	{
-		// Setting up the references.
-		anim = transform.root.gameObject.GetComponent<Animator>();
-		playerCtrl = transform.root.GetComponent<PlayerControl>();
+	// Do not edit here
+	void Start () {
+		StartBase();
+	}
+	
+	// Do not edit here
+	void Update () {
+		UpdateBase();
+	}
+
+	// Write Start() function here
+	protected virtual void StartBase() {
+		bulletScript = bullet.GetComponent<Bullet>();
 
 	}
 
-
-	void FixedUpdate ()
-	{
-		if(Input.GetButtonDown("Fire1")) {
-
-
-
-			if (playerCtrl.dirVertical == 0) {
-				if (playerCtrl.facingRight == true) {
-					direction = 0;
-				}
-				else {
-					direction = 180;
-				}
-			}
-			else {
-				if (playerCtrl.dirVertical > 0) {
-					if (playerCtrl.dirHorizontal > 0) {
-						direction = 45;
-					}
-					else if (playerCtrl.dirHorizontal < 0) {
-						direction = 135;
-					}
-					else if (playerCtrl.dirHorizontal == 0) {
-						direction = 90;
-					}
-				}
-				else if (playerCtrl.dirVertical < 0) {
-					if (playerCtrl.dirHorizontal > 0) {
-						direction = 315;
-					}
-					else if (playerCtrl.dirHorizontal < 0) {
-						direction = 225;
-					}
-					else if (playerCtrl.dirHorizontal == 0) {
-						direction = 270;
-					}
-				}
-			}
-
-			isRapidFire = true;
-		}
-		else {
-			isRapidFire = false;
-		}
-		//GunFather
+	protected virtual void UpdateBase() {
 		RapidFire();
-
-		// If the fire button is pressed...
-//		if(Input.GetButtonDown("Fire1"))
-//		{
-//			// ... set the animator Shoot trigger parameter and play the audioclip.
-//			anim.SetTrigger("Shoot");
-//			GetComponent<AudioSource>().Play();
-//
-//
-//			if (playerCtrl.dirHorizontal != 0 || playerCtrl.dirVertical != 0) {
-//				Rigidbody2D bulletInstance = 
-//					Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
-//				bulletInstance.velocity = new Vector2(playerCtrl.dirHorizontal * speed,
-//				                                      playerCtrl.dirVertical * speed);
-//			} else {
-//				if(playerCtrl.facingRight)
-//				{
-//					// ... instantiate the rocket facing right and set it's velocity to the right. 
-//					Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
-//					bulletInstance.velocity = new Vector2(speed, 0);
-//				}
-//				else
-//				{
-//					// Otherwise instantiate the rocket facing left and set it's velocity to the left.
-//					Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
-//					bulletInstance.velocity = new Vector2(-speed, 0);
-//				}
-//			}
-
-
-//			// If the player is facing right...
-//			if(playerCtrl.facingRight)
-//			{
-//				// ... instantiate the rocket facing right and set it's velocity to the right. 
-//				Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
-//				bulletInstance.velocity = new Vector2(speed, 0);
-//			}
-//			else
-//			{
-//				// Otherwise instantiate the rocket facing left and set it's velocity to the left.
-//				Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
-//				bulletInstance.velocity = new Vector2(-speed, 0);
-//			}
-//		}
+		cooldown = cooldownGun * bulletScript.cooldown;
 	}
-
-	#region GunFatherFunc
-	void Fire () {
-		// ... set the animator Shoot trigger parameter and play the audioclip.
-		anim.SetTrigger("Shoot");
-		GetComponent<AudioSource>().Play();
-
+	
+	protected virtual void Fire () {
 		GameObject bulletInstance
 			= (GameObject)Instantiate(
 				bullet, transform.position, Quaternion.Euler(new Vector3(0,0,180f)));
-		bulletInstance.GetComponent<Rocket>().InitMove(direction, speed, damage);
+		bulletInstance.GetComponent<Bullet>().InitMove(
+			direction, speedGun * bulletScript.speed, damageGun * bulletScript.damage);
 	}
+	
+	public void SetRapidFire (bool fire) {
+		isRapidFire = fire;
+	}
+
 
 	void RapidFire () {
 		if (isRapidFire) {
@@ -145,5 +62,4 @@ public class Gun : MonoBehaviour
 			cooldownTick -= (1f/FPS);
 		}
 	}
-	#endregion
 }

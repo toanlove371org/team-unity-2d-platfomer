@@ -5,19 +5,30 @@ public class Bullet : MonoBehaviour {
 
 	public GameObject explosion;		// Prefab of explosion effect.
 
-	public float speed = 0.5f;
+	public float speed = 20f;
 	public float damage = 1f;
+	public float cooldown = 1f;		// in second
+	public float lifeTime = 1f; 	// in second
 
 	protected float direction;
 
-	// Use this for initialization
+	// Do not edit here
 	void Start () {
-		
+		StartBase();
 	}
 	
-	// Update is called once per frame
+	// Do not edit here
 	void Update () {
-		
+		UpdateBase();
+	}
+
+	protected virtual void StartBase() {
+		// Destroy the bullet after lifeTime seconds if it doesn't get destroyed before then.
+		Destroy(gameObject, lifeTime);
+	}
+
+	protected virtual void UpdateBase() {
+
 	}
 
 	public void InitMove(float dir, float sp, float dam) {
@@ -38,7 +49,14 @@ public class Bullet : MonoBehaviour {
 	public virtual void InitEffect() {
 		// create effect when this object is created
 	}
-	
+
+	/// <summary>
+	/// Set direction, speed, damage of bullet, then move it with
+	/// Move() function
+	/// </summary>
+	/// <param name="dir">Dir. Direction of bullet</param>
+	/// <param name="sp">Sp. Speed of bullet</param>
+	/// <param name="dam">Dam. Damage of bullet</param>
 	protected void SetMove(float dir, float sp, float dam) {
 		direction = dir;
 		speed = sp;

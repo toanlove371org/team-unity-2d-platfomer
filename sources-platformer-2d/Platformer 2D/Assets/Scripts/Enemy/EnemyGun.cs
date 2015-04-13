@@ -26,7 +26,7 @@ public class EnemyGun : MonoBehaviour {
 		GameObject bulletInstance
 			= (GameObject)Instantiate(
 				bullet, transform.position, Quaternion.Euler(new Vector3(0,0,180f)));
-		bulletInstance.GetComponent<EnemyBullet>().SetMove(direction, speed, damage);
+		bulletInstance.GetComponent<EnemyBullet>().InitMove(direction, speed, damage);
 	}
 
 	public void SetRapidFire (bool fire) {

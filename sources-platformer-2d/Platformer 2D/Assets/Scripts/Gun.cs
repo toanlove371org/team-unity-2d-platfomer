@@ -3,10 +3,6 @@ using System.Collections;
 
 public class Gun : MonoBehaviour
 {
-	public Rigidbody2D rocket;				// Prefab of the rocket.
-	//public float speed = 20f;				// The speed the rocket will fire at.
-
-
 	private PlayerControl playerCtrl;		// Reference to the PlayerControl script.
 	private Animator anim;					// Reference to the Animator component.
 
@@ -14,12 +10,13 @@ public class Gun : MonoBehaviour
 	#region GunFather
 	public GameObject bullet; 
 	public float speed = 2.5f;
-	public float cooldown = 0.3f;
+	public float cooldown = 1f;
 	public float direction = 45f;
 	public float damage = 5.0f;
 	
 	private bool isRapidFire = true;
 	private float cooldownTick = 0;
+	private float FPS = 60f;
 	#endregion
 
 	void Awake()
@@ -34,9 +31,8 @@ public class Gun : MonoBehaviour
 	void FixedUpdate ()
 	{
 		if(Input.GetButtonDown("Fire1")) {
-			// ... set the animator Shoot trigger parameter and play the audioclip.
-			anim.SetTrigger("Shoot");
-			GetComponent<AudioSource>().Play();
+
+
 
 			if (playerCtrl.dirVertical == 0) {
 				if (playerCtrl.facingRight == true) {
@@ -126,10 +122,14 @@ public class Gun : MonoBehaviour
 
 	#region GunFatherFunc
 	void Fire () {
+		// ... set the animator Shoot trigger parameter and play the audioclip.
+		anim.SetTrigger("Shoot");
+		GetComponent<AudioSource>().Play();
+
 		GameObject bulletInstance
 			= (GameObject)Instantiate(
 				bullet, transform.position, Quaternion.Euler(new Vector3(0,0,180f)));
-		bulletInstance.GetComponent<Rocket>().SetMove(direction, speed, damage);
+		bulletInstance.GetComponent<Rocket>().InitMove(direction, speed, damage);
 	}
 
 	void RapidFire () {
@@ -138,11 +138,11 @@ public class Gun : MonoBehaviour
 				Fire();
 				cooldownTick = cooldown;
 			} else {
-				cooldownTick -= 0.01f;
+				cooldownTick -= (1f/FPS);
 			}
 		}
 		else if (cooldownTick > 0) {
-			cooldownTick -= 0.01f;
+			cooldownTick -= (1f/FPS);
 		}
 	}
 	#endregion

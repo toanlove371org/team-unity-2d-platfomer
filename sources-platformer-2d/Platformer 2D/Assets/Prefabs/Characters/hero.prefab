@@ -681,8 +681,8 @@ MonoBehaviour:
   jump: 0
   dirHorizontal: 1
   dirVertical: 0
-  moveForce: 365
-  maxSpeed: 8
+  moveForce: 370
+  maxSpeed: 10
   jumpClips:
   - {fileID: 8300000, guid: 50a8d8a939a0f4e77a0dac6ecd2e582b, type: 3}
   - {fileID: 8300000, guid: fc55d077383484ac0ad66aa17fcd746f, type: 3}
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 100000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
   speedGun: 1
-  cooldownGun: 1
+  cooldownGun: .25
   direction: 0
   damageGun: 1
 --- !u!212 &21200000

@@ -14,6 +14,8 @@ public class Gun : MonoBehaviour
 	private float FPS = 60f;
 	private Bullet bulletScript;
 	private float cooldown;
+	private float speed;
+	private float damage;
 
 	// Do not edit here
 	void Start () {
@@ -28,12 +30,14 @@ public class Gun : MonoBehaviour
 	// Write Start() function here
 	protected virtual void StartBase() {
 		bulletScript = bullet.GetComponent<Bullet>();
-
+		SetGun(bulletScript.cooldown,
+		       bulletScript.speed,
+		       bulletScript.damage);
 	}
 
 	protected virtual void UpdateBase() {
 		RapidFire();
-		cooldown = cooldownGun * bulletScript.cooldown;
+
 	}
 	
 	protected virtual void Fire () {
@@ -41,13 +45,18 @@ public class Gun : MonoBehaviour
 			= (GameObject)Instantiate(
 				bullet, transform.position, Quaternion.Euler(new Vector3(0,0,180f)));
 		bulletInstance.GetComponent<Bullet>().InitMove(
-			direction, speedGun * bulletScript.speed, damageGun * bulletScript.damage);
+			direction, speed, damage);
 	}
 	
 	public void SetRapidFire (bool fire) {
 		isRapidFire = fire;
 	}
 
+	public void SetGun(float cd, float sp, float dam) {
+		cooldown = cooldownGun * cd;
+		speed = speedGun * sp;
+		damage = damageGun * dam;
+	}
 
 	void RapidFire () {
 		if (isRapidFire) {

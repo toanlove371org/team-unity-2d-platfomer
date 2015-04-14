@@ -15,6 +15,7 @@ TagManager:
   - HealthBar
   - EnemyBullet
   - ItemPickup
+  - ChangeDirection
   layers:
   - Default
   - TransparentFX

@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\GunPlayer.cs" />
      <Compile Include="Assets\Scripts\LayBombs.cs" />
+     <Compile Include="Assets\Scripts\MovingLand.cs" />
      <Compile Include="Assets\Scripts\Pauser.cs" />
      <Compile Include="Assets\Scripts\PickupItem\BombPickup.cs" />
      <Compile Include="Assets\Scripts\PickupItem\BulletPickup.cs" />

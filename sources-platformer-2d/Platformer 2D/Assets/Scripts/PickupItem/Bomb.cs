@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bomb : MonoBehaviour
+public class Bomb : SpecialWeapon
 {
 	public float bombRadius = 10f;			// Radius within which enemies are killed.
 	public float bombForce = 100f;			// Force that enemies are thrown from the blast.
@@ -16,7 +16,7 @@ public class Bomb : MonoBehaviour
 	private ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
 
 
-	void Awake ()
+	protected override void AwakeBase ()
 	{
 		// Setting up references.
 		explosionFX = GameObject.FindGameObjectWithTag("ExplosionFX").GetComponent<ParticleSystem>();
@@ -25,7 +25,7 @@ public class Bomb : MonoBehaviour
 			layBombs = GameObject.FindGameObjectWithTag("Player").GetComponent<LayBombs>();
 	}
 
-	void Start ()
+	protected override void StartBase ()
 	{
 		
 		// If the bomb has no parent, it has been laid by the player and should detonate.

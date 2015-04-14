@@ -27,6 +27,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -41,6 +42,7 @@ MonoBehaviour:
   pickups:
   - {fileID: 100000, guid: f14f67cf21d1d440181dad13051efd97, type: 2}
   - {fileID: 100000, guid: 9124ba8225a274c91a8eb0e924019612, type: 2}
+  - {fileID: 100000, guid: 5b13b95204a5d0c43aed92751bfd927e, type: 2}
   pickupDeliveryTime: 5
   dropRangeLeft: -15
   dropRangeRight: 15
@@ -57,4 +59,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

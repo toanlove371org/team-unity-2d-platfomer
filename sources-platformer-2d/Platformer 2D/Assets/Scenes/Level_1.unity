@@ -242,6 +242,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
   m_IsPrefabParent: 0
@@ -291,6 +295,10 @@ Prefab:
     - target: {fileID: 108340, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
       propertyPath: m_Name
       value: ChangeDirection 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
@@ -605,6 +613,10 @@ Prefab:
       propertyPath: m_Name
       value: ChangeDirection 2
       objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
   m_IsPrefabParent: 0
@@ -802,6 +814,10 @@ Prefab:
       propertyPath: m_Name
       value: ChangeDirection 4
       objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
   m_IsPrefabParent: 0
@@ -851,6 +867,10 @@ Prefab:
     - target: {fileID: 108340, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
       propertyPath: m_Name
       value: ChangeDirection8.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
@@ -1335,6 +1355,10 @@ Prefab:
       propertyPath: m_Name
       value: ChangeDirection 3
       objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
   m_IsPrefabParent: 0
@@ -1393,6 +1417,10 @@ Prefab:
     - target: {fileID: 108340, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
       propertyPath: m_Name
       value: ChangeDirection8.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
@@ -2796,6 +2824,10 @@ Prefab:
       propertyPath: m_Name
       value: ChangeDirection 5
       objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
   m_IsPrefabParent: 0
@@ -3168,6 +3200,10 @@ Prefab:
     - target: {fileID: 108340, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
       propertyPath: m_Name
       value: ChangeDirection 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
@@ -4207,6 +4243,10 @@ Prefab:
       propertyPath: m_Name
       value: ChangeDirection 1
       objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
   m_IsPrefabParent: 0
@@ -4595,6 +4635,10 @@ Prefab:
     - target: {fileID: 108340, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
       propertyPath: m_Name
       value: ChangeDirection8.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
@@ -5001,6 +5045,10 @@ Prefab:
     - target: {fileID: 108340, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
       propertyPath: m_Name
       value: ChangeDirection8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
@@ -5685,6 +5733,10 @@ Prefab:
       propertyPath: m_Name
       value: ChangeDirection8.2
       objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
   m_IsPrefabParent: 0
@@ -6084,6 +6136,10 @@ Prefab:
       propertyPath: m_Name
       value: ChangeDirection 8
       objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
   m_IsPrefabParent: 0
@@ -6204,6 +6260,10 @@ Prefab:
     - target: {fileID: 108340, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
       propertyPath: m_Name
       value: ChangeDirection8.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 21223574, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cddb36407d7196a4ea46630c794fce7d, type: 2}

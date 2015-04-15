@@ -161,6 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupClip: {fileID: 8300000, guid: 0f0f1f98eb73543f6af74d3b8fb23f1f, type: 3}
   bullet: {fileID: 100000, guid: 8f51f19591fe8b04583d10c465e64d29, type: 2}
+  bulletIcon: {fileID: 2800000, guid: f28cca3aa9289483b8160967b37ef4c5, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

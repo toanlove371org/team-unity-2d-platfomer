@@ -18,4 +18,8 @@ public class BulletHUD : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	public void SetIcon(Texture icon) {
+		guiIcon.texture = icon;
+	}
 }

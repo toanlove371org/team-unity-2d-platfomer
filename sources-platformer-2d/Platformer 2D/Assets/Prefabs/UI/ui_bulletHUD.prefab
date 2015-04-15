@@ -10,6 +10,7 @@ GameObject:
   - 224: {fileID: 22476336}
   - 222: {fileID: 22264808}
   - 131: {fileID: 13135848}
+  - 114: {fileID: 11475654}
   m_Layer: 0
   m_Name: ui_bulletHUD
   m_TagString: Untagged
@@ -17,6 +18,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &11475654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0454cb0d0d147ad44b7f9df1d746cf6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!131 &13135848
 GUITexture:
   m_ObjectHideFlags: 1
@@ -24,12 +36,12 @@ GUITexture:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161098}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: f28cca3aa9289483b8160967b37ef4c5, type: 3}
+  m_Texture: {fileID: 2800000, guid: b126006da8178403dad4a53e28cb67f1, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
     x: 10
-    y: 10
+    y: 90
     width: 84
     height: 70
   m_LeftBorder: 0

@@ -18,7 +18,7 @@ public class EnemyTower : EnemyBaseClass {
 
 	}
 
-	public override void Hurt (int damage)
+	public override void Hurt (float damage)
 	{
 		base.Hurt (damage);
 	}

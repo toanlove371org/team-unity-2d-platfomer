@@ -1,11 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy\EnemyMachineGun.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UI\BulletHUD.cs">
     <Files>
-      <File FileName="Assets\Scripts\Enemy\EnemyGun.cs" Line="8" Column="3" />
-      <File FileName="Assets\Scripts\Enemy\EnemyMachineGun.cs" Line="23" Column="25" />
-      <File FileName="Assets\Scripts\Enemy\EnemyTower.cs" Line="12" Column="26" />
-      <File FileName="Assets\Scripts\Enemy\EnemyBomber.cs" Line="12" Column="2" />
+      <File FileName="Assets\Scripts\UI\WeaponHUD.cs" Line="10" Column="45" />
+      <File FileName="Assets\Scripts\UI\BulletHUD.cs" Line="10" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -5,6 +5,7 @@ public class Bomb : SpecialWeapon
 {
 	public float bombRadius = 10f;			// Radius within which enemies are killed.
 	public float bombForce = 100f;			// Force that enemies are thrown from the blast.
+	public float bombDamage = 2;			// Damage that hurt enemy
 	public AudioClip boom;					// Audioclip of explosion.
 	public AudioClip fuse;					// Audioclip of fuse.
 	public float fuseTime = 1.5f;
@@ -44,6 +45,11 @@ public class Bomb : SpecialWeapon
 		Explode();
 	}
 
+	public void SetBomb(float radius, float force, float damage) {
+		bombRadius = radius;
+		bombForce = force;
+		bombDamage = damage;
+	}
 
 	public void Explode()
 	{
@@ -62,7 +68,7 @@ public class Bomb : SpecialWeapon
 			if(rb != null && rb.tag == "Enemy")
 			{
 				// Find the Enemy script and set the enemy's health to zero.
-				rb.gameObject.GetComponent<EnemyBaseClass>().Hurt(2);
+				rb.gameObject.GetComponent<EnemyBaseClass>().Hurt(bombDamage);
 
 				// Find a vector from the bomb to the enemy.
 				Vector3 deltaPos = rb.transform.position - transform.position;

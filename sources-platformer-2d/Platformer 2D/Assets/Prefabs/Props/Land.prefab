@@ -27,9 +27,8 @@ GameObject:
   - 212: {fileID: 21264224}
   - 61: {fileID: 6143826}
   - 50: {fileID: 5054554}
-  - 114: {fileID: 11498672}
   m_Layer: 12
-  m_Name: MovingLand
+  m_Name: Land
   m_TagString: Land
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,20 +142,6 @@ BoxCollider2D:
   m_Offset: {x: -.260000229, y: .0295277238}
   serializedVersion: 2
   m_Size: {x: 10.1125002, y: 2.75905514}
---- !u!114 &11498672
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c7a8922d62f4664cb1fc06acc3e8ac2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: 180
-  speed: 2
-  freezTime: 1
 --- !u!212 &21264224
 SpriteRenderer:
   m_ObjectHideFlags: 1

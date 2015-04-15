@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyBaseClass : MonoBehaviour {
 
-	public int HP = 2;					// How many times the enemy can be hit before it dies.
+	public float HP = 2f;				// How many times the enemy can be hit before it dies.
 	public Sprite deadEnemy;			// A sprite of the enemy when it's dead.
 	public Sprite damagedEnemy;			// An optional sprite of the enemy when it's damaged.
 	public AudioClip[] deathClips;		// An array of audioclips that can play when the enemy dies.
@@ -45,7 +45,7 @@ public class EnemyBaseClass : MonoBehaviour {
 			Death ();
 	}
 	
-	public virtual void Hurt(int damage)
+	public virtual void Hurt(float damage)
 	{
 		// Reduce the number of hit points by one.
 		HP -= damage;

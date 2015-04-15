@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Rocket : Bullet 
+public class Rocket : PlayerBullet 
 {
 
 	public override void InitEffect() {

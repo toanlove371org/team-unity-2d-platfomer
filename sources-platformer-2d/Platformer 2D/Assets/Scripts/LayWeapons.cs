@@ -7,13 +7,13 @@ public class LayWeapons : MonoBehaviour {
 	public GameObject weapon;				// Prefab of the bomb.
 	
 	
-	private GUITexture weaponHUD;			// Heads up display of whether the player has a bomb or not.
-	
+	private WeaponHUD weaponHUD;			// Heads up display of whether the player has a bomb or not.
+
 	
 	void Awake ()
 	{
 		// Setting up the reference.
-		weaponHUD = GameObject.Find("ui_bombHUD").GetComponent<GUITexture>();
+		weaponHUD = GameObject.Find("ui_weaponHUD").GetComponent<WeaponHUD>();
 	}
 	
 	
@@ -24,9 +24,7 @@ public class LayWeapons : MonoBehaviour {
 		{
 			CreateWeapon();
 		}
-		
-		// The bomb heads up display should be enabled if the player has bombs, other it should be disabled.
-		weaponHUD.enabled = number > 0;
+
 	}
 
 	void CreateWeapon() {
@@ -35,14 +33,19 @@ public class LayWeapons : MonoBehaviour {
 
 		// Instantiate the bomb prefab.
 		Instantiate(weapon, transform.position, transform.rotation);
+
+		// Update number weapon to WeaponHUD
+		weaponHUD.SetNumber(number);
 	}
 
-	public void SetWeapon(GameObject wp, int numb) {
+	public void SetWeapon(GameObject wp, int numb, Texture icon) {
 		if (weapon == wp) {
 			number += numb;
 		} else {
 			weapon = wp;
 			number = numb;
 		}
+		weaponHUD.SetIcon(icon);
+		weaponHUD.SetNumber(number);
 	}
 }

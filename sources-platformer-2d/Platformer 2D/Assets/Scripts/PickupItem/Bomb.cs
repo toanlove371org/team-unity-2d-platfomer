@@ -11,7 +11,6 @@ public class Bomb : SpecialWeapon
 	public GameObject explosion;			// Prefab of explosion effect.
 
 
-	private LayBombs layBombs;				// Reference to the player's LayBombs script.
 	private PickupSpawner pickupSpawner;	// Reference to the PickupSpawner script.
 	private ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
 
@@ -21,8 +20,7 @@ public class Bomb : SpecialWeapon
 		// Setting up references.
 		explosionFX = GameObject.FindGameObjectWithTag("ExplosionFX").GetComponent<ParticleSystem>();
 		pickupSpawner = GameObject.Find("pickupManager").GetComponent<PickupSpawner>();
-		if(GameObject.FindGameObjectWithTag("Player"))
-			layBombs = GameObject.FindGameObjectWithTag("Player").GetComponent<LayBombs>();
+
 	}
 
 	protected override void StartBase ()
@@ -49,9 +47,6 @@ public class Bomb : SpecialWeapon
 
 	public void Explode()
 	{
-		
-		// The player is now free to lay bombs when he has them.
-		layBombs.bombLaid = false;
 
 		// Make the pickup spawner start to deliver a new pickup.
 		pickupSpawner.StartCoroutine(pickupSpawner.DeliverPickup());

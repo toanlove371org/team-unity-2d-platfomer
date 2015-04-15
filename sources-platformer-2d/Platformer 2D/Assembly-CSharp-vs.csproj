@@ -60,19 +60,17 @@
      <Compile Include="Assets\Scripts\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\GunPlayer.cs" />
-     <Compile Include="Assets\Scripts\LayBombs.cs" />
      <Compile Include="Assets\Scripts\LayWeapons.cs" />
      <Compile Include="Assets\Scripts\MovingLand.cs" />
      <Compile Include="Assets\Scripts\Pauser.cs" />
      <Compile Include="Assets\Scripts\PickupItem\Bomb.cs" />
-     <Compile Include="Assets\Scripts\PickupItem\BombPickup.cs" />
      <Compile Include="Assets\Scripts\PickupItem\BulletPickup.cs" />
      <Compile Include="Assets\Scripts\PickupItem\HealthPickup.cs" />
      <Compile Include="Assets\Scripts\PickupItem\PickupItem.cs" />
      <Compile Include="Assets\Scripts\PickupItem\PickupSpawner.cs" />
-     <Compile Include="Assets\Scripts\PickupItem\RocketPickup.cs" />
      <Compile Include="Assets\Scripts\PickupItem\RocketWeapon.cs" />
      <Compile Include="Assets\Scripts\PickupItem\SpecialWeapon.cs" />
+     <Compile Include="Assets\Scripts\PickupItem\WeaponPickup.cs" />
      <Compile Include="Assets\Scripts\PlayerBullet\MultiDirecBullet.cs" />
      <Compile Include="Assets\Scripts\PlayerBullet\PlayerBullet.cs" />
      <Compile Include="Assets\Scripts\PlayerBullet\Rocket.cs" />
@@ -83,6 +81,7 @@
      <Compile Include="Assets\Scripts\ScoreShadow.cs" />
      <Compile Include="Assets\Scripts\SetParticleSortingLayer.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\UI\WeaponHUD.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -8,21 +8,14 @@ public class EnemyBomber : EnemyBaseClass {
 	public float deathSpinMax = 100f;			// A value to give the maximum amount of Torque when dying
 
 	protected Transform frontCheck;		// Reference to the position of the gameobject used for checking if something is in front.
+	protected bool isFacingRight = true;
 
 	protected override void AwakeBase ()
 	{
 		base.AwakeBase ();
 		frontCheck = transform.Find("frontCheck").transform;
 	}
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 
 	public override void FixedUpdateBase ()
 	{
@@ -62,5 +55,6 @@ public class EnemyBomber : EnemyBaseClass {
 		Vector3 enemyScale = transform.localScale;
 		enemyScale.x *= -1;
 		transform.localScale = enemyScale;
+		isFacingRight = !isFacingRight;
 	}
 }

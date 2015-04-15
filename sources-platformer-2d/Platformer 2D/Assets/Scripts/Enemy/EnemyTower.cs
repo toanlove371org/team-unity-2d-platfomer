@@ -3,15 +3,13 @@ using System.Collections;
 
 public class EnemyTower : EnemyBaseClass {
 
+	private EnemyGun gun;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	protected override void AwakeBase (){
+		base.AwakeBase ();
+
+		gun = this.transform.FindChild("gun").GetComponent<EnemyGun>();
+		gun.SetRapidFire(true);
 	}
 
 	public override void FixedUpdateBase ()

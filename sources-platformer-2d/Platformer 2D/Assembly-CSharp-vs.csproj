@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyBomber.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBullet.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyGun.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyMachineGun.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyTower.cs" />
      <Compile Include="Assets\Scripts\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />

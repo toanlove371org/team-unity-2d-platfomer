@@ -1,14 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PickupItem\Bomb.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy\EnemyBaseClass.cs">
     <Files>
-      <File FileName="Assets\Scripts\PickupItem\Bomb.cs" Line="25" Column="3" />
-      <File FileName="Assets\Scripts\PickupItem\BulletPickup.cs" Line="24" Column="33" />
-      <File FileName="Assets\Scripts\PickupItem\WeaponPickup.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PickupItem\PickupItem.cs" Line="23" Column="42" />
-      <File FileName="Assets\Scripts\LayWeapons.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GunPlayer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\BulletHUD.cs" Line="24" Column="3" />
+      <File FileName="Assets\Scripts\Enemy\EnemyBaseClass.cs" Line="88" Column="20" />
+      <File FileName="Assets\Scripts\Enemy\EnemyBomber.cs" Line="18" Column="3" />
+      <File FileName="Assets\Scripts\Enemy\EnemyGun.cs" Line="16" Column="3" />
+      <File FileName="Assets\Scripts\Enemy\EnemyTower.cs" Line="22" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

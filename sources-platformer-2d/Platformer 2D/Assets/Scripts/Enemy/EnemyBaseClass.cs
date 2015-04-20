@@ -2,13 +2,13 @@
 using System.Collections;
 
 public class EnemyBaseClass : MonoBehaviour {
-
+	
 	public float HP = 2f;				// How many times the enemy can be hit before it dies.
 	public Sprite deadEnemy;			// A sprite of the enemy when it's dead.
 	public Sprite damagedEnemy;			// An optional sprite of the enemy when it's damaged.
 	public AudioClip[] deathClips;		// An array of audioclips that can play when the enemy dies.
 	public GameObject hundredPointsUI;	// A prefab of 100 that appears when the enemy dies.
-
+	
 	
 	protected SpriteRenderer ren;		// Reference to the sprite renderer.
 	protected bool dead = false;		// Whether or not the enemy is dead.
@@ -19,7 +19,7 @@ public class EnemyBaseClass : MonoBehaviour {
 	{
 		AwakeBase ();
 	}
-
+	
 	protected virtual void AwakeBase () {
 		// Setting up the references.
 		ren = transform.Find("body").GetComponent<SpriteRenderer>();
@@ -29,11 +29,11 @@ public class EnemyBaseClass : MonoBehaviour {
 	void FixedUpdate ()
 	{
 		FixedUpdateBase ();
-
+		
 	}
-
-	public virtual void FixedUpdateBase () {
-
+	
+	protected virtual void FixedUpdateBase () {
+		
 		// If the enemy has one hit point left and has a damagedEnemy sprite...
 		if(HP == 1 && damagedEnemy != null)
 			// ... set the sprite renderer's sprite to be the damagedEnemy sprite.
@@ -72,7 +72,7 @@ public class EnemyBaseClass : MonoBehaviour {
 		// Set dead to true.
 		dead = true;
 		
-
+		
 		// Find all of the colliders on the gameobject and set them all to be triggers.
 		Collider2D[] cols = GetComponents<Collider2D>();
 		foreach(Collider2D c in cols)
@@ -92,5 +92,5 @@ public class EnemyBaseClass : MonoBehaviour {
 		// Instantiate the 100 points prefab at this point.
 		Instantiate(hundredPointsUI, scorePos, Quaternion.identity);
 	}
-
+	
 }

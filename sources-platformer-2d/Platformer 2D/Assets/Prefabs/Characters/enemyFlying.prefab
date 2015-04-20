@@ -42,9 +42,10 @@ GameObject:
   - 50: {fileID: 5000000}
   - 58: {fileID: 5800000}
   - 95: {fileID: 9500000}
-  - 114: {fileID: 11420352}
+  - 61: {fileID: 6112706}
+  - 114: {fileID: 11463060}
   m_Layer: 10
-  m_Name: enemyMachineGun
+  m_Name: enemyFlying
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,8 +59,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 498136}
-  - 114: {fileID: 11440336}
-  - 61: {fileID: 6159048}
+  - 58: {fileID: 5800378}
+  - 114: {fileID: 11405356}
   m_Layer: 10
   m_Name: gun
   m_TagString: Untagged
@@ -98,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.08999991, y: .769999981, z: 0}
+  m_LocalPosition: {x: -5.87586594, y: 3.96186829, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400000}
@@ -124,17 +125,43 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_Mass: 1
+  m_Mass: 9.99999975e-05
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_FixedAngle: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
 --- !u!58 &5800000
 CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: .300000012}
+  serializedVersion: 2
+  m_Radius: 5
+--- !u!58 &5800378
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163650}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: .270000011}
+  serializedVersion: 2
+  m_Radius: 10
+--- !u!61 &6112706
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -145,20 +172,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: .300000012}
   serializedVersion: 2
-  m_Radius: .5
---- !u!61 &6159048
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163650}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 3.72000003, y: .360000014}
-  serializedVersion: 2
-  m_Size: {x: 7, y: .910000026}
+  m_Size: {x: 1, y: 1}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -176,7 +190,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11420352
+--- !u!114 &11405356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7adbe9bb188b47f40bddc4450f82ae3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 100000, guid: 277a297289fba7842814d2252213ecab, type: 2}
+  speedGun: 1
+  cooldownGun: 1
+  direction: 0
+  damageGun: 1
+  gunRange: 10
+--- !u!114 &11463060
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -187,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ccb05b34cd60c45997d61491d6ed70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 2
+  HP: 5
   deadEnemy: {fileID: 21300000, guid: 73fa5f80d4ddd4196b767cc01c1b5c68, type: 3}
   damagedEnemy: {fileID: 21300000, guid: 73fa5f80d4ddd4196b767cc01c1b5c68, type: 3}
   deathClips:
@@ -197,22 +228,6 @@ MonoBehaviour:
   deathSpinMin: -100
   deathSpinMax: 100
   isFacingRight: 1
---- !u!114 &11440336
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f25a6387bc55cc42bd55d069e8f552f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 100000, guid: 277a297289fba7842814d2252213ecab, type: 2}
-  speedGun: 1
-  cooldownGun: 1
-  direction: 0
-  damageGun: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

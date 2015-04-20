@@ -84,7 +84,9 @@ public class Bomb : SpecialWeapon
 		explosionFX.Play();
 
 		// Instantiate the explosion prefab.
-		Instantiate(explosion,transform.position, Quaternion.identity);
+		GameObject exTemp = (GameObject)Instantiate(explosion,transform.position, Quaternion.identity);
+		float scaleExplostionDelta = bombRadius/(explosion.GetComponent<Renderer>().bounds.size.x / 2f);
+		exTemp.transform.localScale = new Vector2(scaleExplostionDelta, scaleExplostionDelta);
 
 		// Play the explosion sound effect.
 		AudioSource.PlayClipAtPoint(boom, transform.position);

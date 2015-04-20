@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketSpeed: 20
-  rocketRadius: 10
+  rocketRadius: 9.21500015
   rocketForce: 100
   rocketDamage: 2
   lifeTime: 1

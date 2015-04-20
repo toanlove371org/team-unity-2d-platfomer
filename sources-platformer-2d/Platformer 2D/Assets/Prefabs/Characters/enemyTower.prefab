@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 413910}
-  - 114: {fileID: 11486838}
+  - 114: {fileID: 11426416}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -151,7 +151,7 @@ MonoBehaviour:
   deathClips:
   - {fileID: 8300000, guid: 039514349165244c6a43be5c3070d14b, type: 3}
   hundredPointsUI: {fileID: 100006, guid: 31974361bc9e44fb18c77b64a4cb3bbd, type: 2}
---- !u!114 &11486838
+--- !u!114 &11426416
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 123714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f25a6387bc55cc42bd55d069e8f552f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d9bf156813c141e98b61835f46356f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 100000, guid: 277a297289fba7842814d2252213ecab, type: 2}

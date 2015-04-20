@@ -32,7 +32,7 @@ public class EnemyBaseClass : MonoBehaviour {
 
 	}
 
-	public virtual void FixedUpdateBase () {
+	protected virtual void FixedUpdateBase () {
 
 		// If the enemy has one hit point left and has a damagedEnemy sprite...
 		if(HP == 1 && damagedEnemy != null)

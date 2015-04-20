@@ -8,7 +8,8 @@ public class EnemyBomber : EnemyBaseClass {
 	public float deathSpinMax = 100f;			// A value to give the maximum amount of Torque when dying
 
 	protected Transform frontCheck;		// Reference to the position of the gameobject used for checking if something is in front.
-	protected bool isFacingRight = true;
+	[HideInInspector]
+	public bool isFacingRight = true;
 
 	protected override void AwakeBase ()
 	{
@@ -17,7 +18,7 @@ public class EnemyBomber : EnemyBaseClass {
 	}
 
 
-	public override void FixedUpdateBase ()
+	protected override void FixedUpdateBase ()
 	{
 		// Create an array of all the colliders in front of the enemy.
 		Collider2D[] frontHits = Physics2D.OverlapPointAll(frontCheck.position, 1);

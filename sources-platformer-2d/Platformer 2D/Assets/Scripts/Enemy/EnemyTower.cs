@@ -3,20 +3,15 @@ using System.Collections;
 
 public class EnemyTower : EnemyBaseClass {
 
-	private EnemyGun gun;
+	private Gun gun;
 
 	protected override void AwakeBase (){
 		base.AwakeBase ();
 
-		gun = this.transform.FindChild("gun").GetComponent<EnemyGun>();
+		gun = this.transform.FindChild("gun").GetComponent<Gun>();
 		gun.SetRapidFire(true);
 	}
 
-	public override void FixedUpdateBase ()
-	{
-		base.FixedUpdateBase ();
-
-	}
 
 	public override void Hurt (float damage)
 	{

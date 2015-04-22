@@ -46,28 +46,7 @@ public class PlayerHealth : MonoBehaviour
 				// If the player doesn't have health, do some stuff, let him fall into the river to reload the level.
 				else
 				{
-					// Find all of the colliders on the gameobject and set them all to be triggers.
-					Collider2D[] cols = GetComponents<Collider2D>();
-					foreach(Collider2D c in cols)
-					{
-						c.isTrigger = true;
-					}
-
-					// Move all sprite parts of the player to the front
-					SpriteRenderer[] spr = GetComponentsInChildren<SpriteRenderer>();
-					foreach(SpriteRenderer s in spr)
-					{
-						s.sortingLayerName = "UI";
-					}
-
-					// ... disable user Player Control script
-					GetComponent<PlayerControl>().enabled = false;
-
-					// ... disable the Gun script to stop a dead guy shooting a nonexistant bazooka
-					GetComponentInChildren<Gun>().enabled = false;
-
-					// ... Trigger the 'Die' animation state
-					anim.SetTrigger("Die");
+					Dead ();
 				}
 			}
 		} 
@@ -109,5 +88,34 @@ public class PlayerHealth : MonoBehaviour
 
 		// Set the scale of the health bar to be proportional to the player's health.
 		healthBar.transform.localScale = new Vector3(healthScale.x * health * 0.01f, 1, 1);
+
+		if (health <= 0) {
+			Dead ();
+		}
+	}
+
+	void Dead () {
+		// Find all of the colliders on the gameobject and set them all to be triggers.
+		Collider2D[] cols = GetComponents<Collider2D>();
+		foreach(Collider2D c in cols)
+		{
+			c.isTrigger = true;
+		}
+		
+		// Move all sprite parts of the player to the front
+		SpriteRenderer[] spr = GetComponentsInChildren<SpriteRenderer>();
+		foreach(SpriteRenderer s in spr)
+		{
+			s.sortingLayerName = "UI";
+		}
+		
+		// ... disable user Player Control script
+		GetComponent<PlayerControl>().enabled = false;
+		
+		// ... disable the Gun script to stop a dead guy shooting a nonexistant bazooka
+		GetComponentInChildren<Gun>().enabled = false;
+		
+		// ... Trigger the 'Die' animation state
+		anim.SetTrigger("Die");
 	}
 }

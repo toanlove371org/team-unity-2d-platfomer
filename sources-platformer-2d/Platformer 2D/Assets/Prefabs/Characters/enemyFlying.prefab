@@ -40,7 +40,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 50: {fileID: 5000000}
-  - 58: {fileID: 5800000}
   - 95: {fileID: 9500000}
   - 61: {fileID: 6112706}
   - 114: {fileID: 11463060}
@@ -134,19 +133,6 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!58 &5800000
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .300000012}
-  serializedVersion: 2
-  m_Radius: 5
 --- !u!58 &5800378
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -203,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 100000, guid: 277a297289fba7842814d2252213ecab, type: 2}
   speedGun: 1
-  cooldownGun: 1
+  cooldownGun: .200000003
   direction: 0
   damageGun: 1
   gunRange: 10

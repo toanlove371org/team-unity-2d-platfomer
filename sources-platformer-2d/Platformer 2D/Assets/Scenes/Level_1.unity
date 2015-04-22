@@ -2278,20 +2278,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 31
       objectReference: {fileID: 0}
-    - target: {fileID: 5800000, guid: 2a16ab5359aee3b499125f31f5fdbc23, type: 2}
-      propertyPath: m_Enabled
-      value: 0
+    - target: {fileID: 11405356, guid: 2a16ab5359aee3b499125f31f5fdbc23, type: 2}
+      propertyPath: damageGun
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 6112706, guid: 2a16ab5359aee3b499125f31f5fdbc23, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5800378, guid: 2a16ab5359aee3b499125f31f5fdbc23, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5800000, guid: 2a16ab5359aee3b499125f31f5fdbc23, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a16ab5359aee3b499125f31f5fdbc23, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &667182539

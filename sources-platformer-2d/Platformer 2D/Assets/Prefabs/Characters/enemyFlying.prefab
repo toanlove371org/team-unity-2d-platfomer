@@ -27,7 +27,7 @@ GameObject:
   m_Layer: 0
   m_Name: frontCheck
   m_TagString: Untagged
-  m_Icon: {fileID: -195793285, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -129,7 +129,7 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_FixedAngle: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   speedGun: 1
   cooldownGun: .200000003
   direction: 0
-  damageGun: 1
+  damageGun: 4
   gunRange: 10
 --- !u!114 &11463060
 MonoBehaviour:

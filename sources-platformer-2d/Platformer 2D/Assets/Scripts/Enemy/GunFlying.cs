@@ -9,8 +9,6 @@ public class GunFlying : EnemyGun {
 	protected override void StartBase () {
 		base.StartBase();
 		player = GameObject.Find("hero").transform;
-		Debug.Log(AngleBetweenPoint(0, 0, -1f, -1f));
-		Debug.Log(AngleBetweenPoint(0, 0, -1f, 0f));
 	}
 	
 	protected override void SetDirection() {
@@ -28,8 +26,8 @@ public class GunFlying : EnemyGun {
 	}
 
 	float AngleBetweenPoint(float xA, float yA, float xB, float yB) {
-		float Xa = xB - xA;
-		float Ya = yB - yA;
+//		float Xa = xB - xA;
+//		float Ya = yB - yA;
 //		return Mathf.Abs(
 //			360 * ((Mathf.Abs(Ya) - Ya) / (2 * Mathf.Abs(Ya)))
 //			- (int)(Mathf.Acos((Xa) / Mathf.Sqrt(Xa * Xa + Ya * Ya)) * 180 / Mathf.PI));

@@ -13,12 +13,16 @@ public class GunFlying : EnemyGun {
 
 	protected override void SetDirection() {
 		if (seeTarget) {
-			direction = Vector2.Angle(this.transform.position, player.position);
+			direction = AngleBetweenPoint(this.transform.position, player.position);
 
 			isRapidFire = true;
 		}
 		else {
 			isRapidFire = false;
 		}
+	}
+
+	float AngleBetweenPoint(Vector2 a, Vector2 b) {
+		return Mathf.Atan2 (b.y - a.y, b.x - a.x);
 	}
 }

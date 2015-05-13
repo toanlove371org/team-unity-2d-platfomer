@@ -13,13 +13,13 @@ public class Bomb : SpecialWeapon
 
 
 	private PickupSpawner pickupSpawner;	// Reference to the PickupSpawner script.
-	private ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
+	public ParticleSystem explosionFX;		// Reference to the particle system of the explosion effect.
 
 
 	protected override void AwakeBase ()
 	{
 		// Setting up references.
-		explosionFX = GameObject.FindGameObjectWithTag("ExplosionFX").GetComponent<ParticleSystem>();
+		//explosionFX = GameObject.FindGameObjectWithTag("ExplosionFX").GetComponent<ParticleSystem>();
 		pickupSpawner = GameObject.Find("pickupManager").GetComponent<PickupSpawner>();
 
 	}

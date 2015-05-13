@@ -41,6 +41,13 @@ public class EnemyBomber : EnemyBaseClass {
 		
 		base.FixedUpdateBase ();
 	}
+
+	protected override void DamagedEffect() {
+		base.DamagedEffect();
+		if (this.transform.FindChild("gun")) {
+			this.transform.FindChild("gun").gameObject.SetActive(false);
+		}
+	}
 	
 	protected override void Death ()
 	{

@@ -35,14 +35,19 @@ public class EnemyBaseClass : MonoBehaviour {
 	protected virtual void FixedUpdateBase () {
 		
 		// If the enemy has one hit point left and has a damagedEnemy sprite...
-		if(HP == 1 && damagedEnemy != null)
+		if(HP == 1 && damagedEnemy != null) {
 			// ... set the sprite renderer's sprite to be the damagedEnemy sprite.
-			ren.sprite = damagedEnemy;
+			DamagedEffect();
+		}
 		
 		// If the enemy has zero or fewer hit points and isn't dead yet...
 		if(HP <= 0 && !dead)
 			// ... call the death function.
 			Death ();
+	}
+
+	protected virtual void DamagedEffect() {
+		ren.sprite = damagedEnemy;
 	}
 	
 	public virtual void Hurt(float damage)

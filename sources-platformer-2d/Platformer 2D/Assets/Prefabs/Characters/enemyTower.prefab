@@ -44,6 +44,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 413910}
   - 114: {fileID: 11486838}
+  - 61: {fileID: 6143542}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -70,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.1399994, y: 5.67000008, z: 0}
+  m_LocalPosition: {x: 33.3800011, y: -1.42999995, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 2}
   m_Children:
   - {fileID: 413910}
@@ -117,6 +118,19 @@ CircleCollider2D:
   m_Offset: {x: -.140000001, y: .180000007}
   serializedVersion: 2
   m_Radius: .230000004
+--- !u!61 &6143542
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123714}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -3.20000005, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 6.4000001, y: 1}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3

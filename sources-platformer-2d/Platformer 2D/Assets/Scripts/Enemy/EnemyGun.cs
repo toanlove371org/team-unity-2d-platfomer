@@ -19,12 +19,17 @@ public class EnemyGun : Gun {
 	
 	protected virtual void SetDirection() {
 		if (seeTarget) {
-			if (enemyParent.GetComponent<EnemyBomber>().isFacingRight) {
-				direction = 0;
+			if (enemyParent.GetComponent<EnemyBomber>()) {
+				if (enemyParent.GetComponent<EnemyBomber>().isFacingRight) {
+					direction = 0;
+				}
+				else {
+					direction = 180;
+				}
 			}
-			else {
-				direction = 180;
-			}
+//			else if (enemyParent.GetComponent<EnemyTower>()) {
+//				direction = 180;
+//			}
 			isRapidFire = true;
 		}
 		else {

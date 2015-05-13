@@ -60,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.0082283, y: -6.9745965, z: 0}
+  m_LocalPosition: {x: -14.0350323, y: 10.8552265, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -162,10 +162,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombRadius: 7
   bombForce: 100
+  bombDamage: 2
   boom: {fileID: 8300000, guid: 8b4e61c51941a46d1aac273472c814fd, type: 3}
   fuse: {fileID: 8300000, guid: 238da4efc08184aee919af254edb2ef1, type: 3}
   fuseTime: 1.5
   explosion: {fileID: 100000, guid: 9c8b546f746e74328ab6b8bba733af67, type: 2}
+  explosionFX: {fileID: 19800000, guid: 5b8d8461f4d094ae1911a6d9df6d9f68, type: 2}
 --- !u!114 &11446612
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -34,7 +34,8 @@ public class PickupSpawner : MonoBehaviour
 		yield return new WaitForSeconds(pickupDeliveryTime);
 
 		// Create a random x coordinate for the delivery in the drop range.
-		float dropPosX = Random.Range(dropRangeLeft, dropRangeRight);
+		float playerPosX = GameObject.FindGameObjectWithTag("Player").transform.position.x;
+		float dropPosX = Random.Range(playerPosX - dropRangeLeft, playerPosX + dropRangeRight);
 
 		// Create a position with the random x coordinate.
 		Vector3 dropPos = new Vector3(dropPosX, 15f, 1f);

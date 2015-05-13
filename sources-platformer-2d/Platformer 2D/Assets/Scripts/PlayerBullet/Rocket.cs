@@ -10,8 +10,6 @@ public class Rocket : PlayerBullet
 
 	protected override void OnTriggerEnter2DBase (Collider2D col) 
 	{
-		base.OnTriggerEnter2DBase (col);
-
 		switch(col.tag) {
 		case "Enemy":
 			col.gameObject.GetComponent<EnemyBaseClass>().Hurt(1);
@@ -22,6 +20,7 @@ public class Rocket : PlayerBullet
 			
 			// Destroy the bomb crate.
 			Destroy (col.transform.root.gameObject);
+			Explode();
 			break;
 		case "Obstacle":
 		case "ground":

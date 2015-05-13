@@ -2,14 +2,10 @@
 using System.Collections;
 
 public class EnemyTower : EnemyBaseClass {
-	
-	private Gun gun;
-	
+
 	protected override void AwakeBase (){
 		base.AwakeBase ();
-		
-		gun = this.transform.FindChild("gun").GetComponent<Gun>();
-		gun.SetRapidFire(true);
+
 	}
 	
 	

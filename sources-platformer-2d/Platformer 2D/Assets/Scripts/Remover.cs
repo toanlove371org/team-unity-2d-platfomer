@@ -27,6 +27,7 @@ public class Remover : MonoBehaviour
 			// ... reload the level.
 			StartCoroutine("ReloadGame");
 		}
+
 		else
 		{
 			// ... instantiate the splash where the enemy falls in.

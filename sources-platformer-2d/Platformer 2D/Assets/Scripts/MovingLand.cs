@@ -29,12 +29,17 @@ public class MovingLand : MonoBehaviour {
 		if (col.tag == "ChangeDirection") {
 			speedTemp = 0;
 			StartCoroutine(Freez(freezTime));
+			if (col.GetComponent<ChangeDirection>()) {
+				direction = col.GetComponent<ChangeDirection>().direction;
+			} else {
+				direction = direction + 180;
+			}
 		}
 	}
 
 	IEnumerator Freez(float time) {
 		yield return new WaitForSeconds(time);
 		speedTemp = speed;
-		direction = direction + 180;
+
 	}
 }

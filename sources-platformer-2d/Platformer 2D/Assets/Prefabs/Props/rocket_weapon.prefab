@@ -177,7 +177,7 @@ MonoBehaviour:
   rocketSpeed: 20
   rocketRadius: 10
   rocketForce: 100
-  rocketDamage: 2
+  rocketDamage: 3
   lifeTime: 1
   bomb: {fileID: 100000, guid: 9f1c955688b614b259cf703b0b1c73d2, type: 2}
 --- !u!198 &19806534

@@ -1,16 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Remover.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\MEGA\Projects\Unity projects\Sample Shader\Assets\Shaders\Chap5-Cloth.shader">
     <Files>
-      <File FileName="..\..\..\..\MEGA\Projects\Unity projects\The World Tree Defense\Assets\Menu\StartScreenManager.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\..\MEGA\Projects\Unity projects\The World Tree Defense\Assets\Menu\PlayScreenManager.cs" Line="50" Column="30" />
-      <File FileName="..\..\..\..\MEGA\Projects\Unity projects\The World Tree Defense\Assets\Menu\Scripts\GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MovingLand.cs" Line="31" Column="37" />
-      <File FileName="Assets\Scripts\Enemy\GunFlying.cs" Line="12" Column="3" />
-      <File FileName="Assets\Scripts\Enemy\EnemyTower.cs" Line="18" Column="3" />
-      <File FileName="Assets\Scripts\Enemy\EnemyBomber.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemy\EnemyGun.cs" Line="14" Column="41" />
-      <File FileName="Assets\Scripts\Remover.cs" Line="30" Column="3" />
+      <File FileName="..\..\..\..\MEGA\Projects\Unity projects\Sample Shader\Assets\Shaders\Chap5-Cloth.shader" Line="1" Column="24" />
+      <File FileName="..\..\..\..\MEGA\Projects\Unity projects\Sample Shader\Assets\Shaders\Chap5-DiffuseConvolution.shader" Line="1" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

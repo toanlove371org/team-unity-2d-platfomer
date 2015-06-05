@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyGun : Gun {
 	
 	protected bool seeTarget;
+	protected Transform target;
 	protected GameObject enemyParent;
 	
 	protected override void StartBase () {
@@ -40,12 +41,14 @@ public class EnemyGun : Gun {
 	void OnTriggerEnter2D (Collider2D col) {
 		if (col.tag == "Player") {
 			seeTarget = true;
+			target = col.gameObject.transform;
 		}
 	}
 	
 	void OnTriggerExit2D(Collider2D col) {
 		if (col.tag == "Player") {
 			seeTarget = false;
+			target = null;
 		}
 	}
 }

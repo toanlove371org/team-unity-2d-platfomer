@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40,8 +40,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickups:
-  - {fileID: 100000, guid: f14f67cf21d1d440181dad13051efd97, type: 2}
   - {fileID: 100000, guid: 9124ba8225a274c91a8eb0e924019612, type: 2}
+  - {fileID: 100000, guid: e180f47296092374e901744610408411, type: 2}
   - {fileID: 100000, guid: 5b13b95204a5d0c43aed92751bfd927e, type: 2}
   pickupDeliveryTime: 5
   dropRangeLeft: -15

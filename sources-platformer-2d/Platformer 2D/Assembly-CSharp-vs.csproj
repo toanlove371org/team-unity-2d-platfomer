@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyTower.cs" />
      <Compile Include="Assets\Scripts\Enemy\GunFlying.cs" />
      <Compile Include="Assets\Scripts\FollowPlayer.cs" />
+     <Compile Include="Assets\Scripts\GameTrigger.cs" />
      <Compile Include="Assets\Scripts\Gold.cs" />
      <Compile Include="Assets\Scripts\Gold_Management.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
@@ -85,6 +86,8 @@
      <Compile Include="Assets\Scripts\ScoreShadow.cs" />
      <Compile Include="Assets\Scripts\SetParticleSortingLayer.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\TrigCheckDestroyed.cs" />
+     <Compile Include="Assets\Scripts\TrigHideObject.cs" />
      <Compile Include="Assets\Scripts\UI\BulletHUD.cs" />
      <Compile Include="Assets\Scripts\UI\WeaponHUD.cs" />
  <Reference Include="UnityEngine.UI">

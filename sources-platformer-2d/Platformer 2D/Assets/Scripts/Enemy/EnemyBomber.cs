@@ -6,7 +6,8 @@ public class EnemyBomber : EnemyBaseClass {
 	public float moveSpeed = 2f;		// The speed the enemy moves at.
 	public float deathSpinMin = -100f;			// A value to give the minimum amount of Torque when dying
 	public float deathSpinMax = 100f;			// A value to give the maximum amount of Torque when dying
-	
+	public bool moveLeft = true;
+
 	protected Transform frontCheck;		// Reference to the position of the gameobject used for checking if something is in front.
 	[HideInInspector]
 	public bool isFacingRight = true;
@@ -17,7 +18,12 @@ public class EnemyBomber : EnemyBaseClass {
 		frontCheck = transform.Find("frontCheck").transform;
 	}
 	
-	
+	void Start() {
+		if (moveLeft) {
+			Flip();
+		}
+	}
+
 	protected override void FixedUpdateBase ()
 	{
 		// Create an array of all the colliders in front of the enemy.

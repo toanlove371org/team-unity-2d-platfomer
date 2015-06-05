@@ -22,7 +22,7 @@ public class HealthPickup : PickupItem
 
 		// Increasse the player's health by the health bonus but clamp it at 100.
 		playerHealth.health += healthBonus;
-		playerHealth.health = Mathf.Clamp(playerHealth.health, 0f, 100f);
+		playerHealth.health = Mathf.Clamp(playerHealth.health, 0f, 10f);
 
 		// Update the health bar.
 		playerHealth.UpdateHealthBar();

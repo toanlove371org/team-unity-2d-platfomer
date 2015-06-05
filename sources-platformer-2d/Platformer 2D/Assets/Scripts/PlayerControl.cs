@@ -51,20 +51,33 @@ public class PlayerControl : MonoBehaviour
 	void FixedUpdate ()
 	{
 		// Cache the horizontal input.
-		float h = Input.GetAxis("Horizontal");
-
+		float h;// Input.GetAxis("Horizontal");
+		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
+			h = 1;
+		} else if (Input.GetKey (KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
+			h = -1;
+		} else {
+			h = 0;
+		}
 		// The Speed animator parameter is set to the absolute value of the horizontal input.
 		anim.SetFloat("Speed", Mathf.Abs(h));
 
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
-		if(h * GetComponent<Rigidbody2D>().velocity.x < maxSpeed)
+		if(h * GetComponent<Rigidbody2D>().velocity.x < maxSpeed) {
 			// ... add a force to the player.
 			GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
+		}
 
 		// If the player's horizontal velocity is greater than the maxSpeed...
-		if(Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed)
+		if(Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed) {
 			// ... set the player's velocity to the maxSpeed in the x axis.
 			GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+		}
+
+		// remove slide in ground
+		if (h == 0 && grounded == true) {
+			this.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, this.GetComponent<Rigidbody2D>().velocity.y);
+		}
 
 		// If the input is moving the player right and the player is facing left...
 		if(h > 0 && !facingRight) {
@@ -113,8 +126,7 @@ public class PlayerControl : MonoBehaviour
 			jump = false;
 		}
 	}
-	
-	
+
 	void Flip ()
 	{
 		// Switch the way the player is labelled as facing.
@@ -125,7 +137,6 @@ public class PlayerControl : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-
 
 	public IEnumerator Taunt()
 	{
@@ -149,7 +160,6 @@ public class PlayerControl : MonoBehaviour
 		}
 	}
 
-
 	int TauntRandom()
 	{
 		// Choose a random index of the taunts array.
@@ -162,5 +172,19 @@ public class PlayerControl : MonoBehaviour
 		else
 			// Otherwise return this index.
 			return i;
+	}
+
+	void OnTriggerEnter2D(Collider2D col) {
+		switch(col.tag) {
+		case "CheckPoint":
+			GameTrigger.Instance.SetHeroSpawnPos(col.gameObject.transform.position);
+			break;
+		case "TriggerHide":
+			GameTrigger.Instance.ShowObjects(col.gameObject);
+			break;
+		case "TriggerItem":
+			GameTrigger.Instance.SpawnItem(col.gameObject.transform.position);
+			break;
+		}
 	}
 }

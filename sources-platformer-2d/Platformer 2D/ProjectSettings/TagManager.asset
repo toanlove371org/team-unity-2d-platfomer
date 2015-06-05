@@ -17,6 +17,9 @@ TagManager:
   - ItemPickup
   - ChangeDirection
   - Land
+  - CheckPoint
+  - TriggerHide
+  - TriggerItem
   layers:
   - Default
   - TransparentFX

@@ -1,11 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TrigCheckDestroyed.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameTrigger.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerControl.cs" Line="181" Column="10" />
-      <File FileName="Assets\Scripts\GameTrigger.cs" Line="57" Column="20" />
-      <File FileName="Assets\Scripts\TrigHideObject.cs" Line="10" Column="23" />
-      <File FileName="Assets\Scripts\TrigCheckDestroyed.cs" Line="31" Column="4" />
+      <File FileName="Assets\Scripts\GameTrigger.cs" Line="66" Column="77" />
+      <File FileName="Assets\Scripts\DialogTooltip.cs" Line="56" Column="56" />
+      <File FileName="Assets\Scripts\FadeScene.cs" Line="84" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

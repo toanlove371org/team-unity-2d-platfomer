@@ -11,6 +11,7 @@ GameObject:
   - 222: {fileID: 22264808}
   - 131: {fileID: 13135848}
   - 114: {fileID: 11475654}
+  - 132: {fileID: 13227252}
   m_Layer: 0
   m_Name: ui_bulletHUD
   m_TagString: Untagged
@@ -41,13 +42,36 @@ GUITexture:
   m_PixelInset:
     serializedVersion: 2
     x: 10
-    y: 90
+    y: 10
     width: 84
     height: 70
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!132 &13227252
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161098}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 3
+  m_Alignment: 0
+  m_PixelOffset: {x: 100, y: 50}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 50
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!222 &22264808
 CanvasRenderer:
   m_ObjectHideFlags: 1

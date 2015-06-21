@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class EnemyBullet : Bullet {
+
+
 	protected override void OnTriggerEnter2DBase (Collider2D col) {
 		base.OnTriggerEnter2DBase (col);
 

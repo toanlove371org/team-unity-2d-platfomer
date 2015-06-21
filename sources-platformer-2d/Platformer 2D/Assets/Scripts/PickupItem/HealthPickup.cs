@@ -12,7 +12,7 @@ public class HealthPickup : PickupItem
 	protected override void AwakeBase ()
 	{
 		// Setting up the references.
-		pickupSpawner = GameObject.Find("pickupManager").GetComponent<PickupSpawner>();
+//		pickupSpawner = GameObject.Find("pickupManager").GetComponent<PickupSpawner>();
 		base.AwakeBase();
 	}
 
@@ -28,6 +28,6 @@ public class HealthPickup : PickupItem
 		playerHealth.UpdateHealthBar();
 
 		// Trigger a new delivery.
-		pickupSpawner.StartCoroutine(pickupSpawner.DeliverPickup());
+//		pickupSpawner.StartCoroutine(pickupSpawner.DeliverPickup());
 	}
 }

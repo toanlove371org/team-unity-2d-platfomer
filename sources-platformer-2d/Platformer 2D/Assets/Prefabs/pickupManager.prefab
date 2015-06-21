@@ -43,11 +43,12 @@ MonoBehaviour:
   - {fileID: 100000, guid: 9124ba8225a274c91a8eb0e924019612, type: 2}
   - {fileID: 100000, guid: e180f47296092374e901744610408411, type: 2}
   - {fileID: 100000, guid: 5b13b95204a5d0c43aed92751bfd927e, type: 2}
+  - {fileID: 100000, guid: e2c0dfbaf78d7a946988293935441c46, type: 2}
   pickupDeliveryTime: 5
   dropRangeLeft: -15
   dropRangeRight: 15
-  highHealthThreshold: 75
-  lowHealthThreshold: 25
+  highHealthThreshold: 6
+  lowHealthThreshold: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

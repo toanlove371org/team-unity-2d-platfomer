@@ -3,8 +3,12 @@ using System.Collections;
 
 public class GameTrigger : MonoBehaviour {
 
-	public GameObject hero;
+	private GameObject hero;
+	public Font font;
+	private string noticeText;
 	private Vector2 heroSpawnPos;
+
+	GUIStyle myStyle;
 
 	#region Singleton
 	private static GameTrigger instance;
@@ -23,6 +27,11 @@ public class GameTrigger : MonoBehaviour {
 	void Start () {
 		hero = GameObject.FindGameObjectWithTag("Player");
 		heroSpawnPos = hero.transform.position;
+		myStyle = new GUIStyle();
+		myStyle.font = font;
+		myStyle.fontSize = 40;
+		myStyle.alignment = TextAnchor.MiddleCenter;
+		myStyle.normal.textColor = Color.white;
 	}
 	
 	// Update is called once per frame
@@ -36,27 +45,45 @@ public class GameTrigger : MonoBehaviour {
 	}
 
 	public void RespawnHero() {
+		hero.GetComponentInChildren<GunPlayer>().ResetBullet();
 		hero.SetActive(false);
-		StartCoroutine("WaitToRespawn");
+		StartCoroutine(WaitToRespawn(heroSpawnPos));
+
 	}
 
-	IEnumerator WaitToRespawn() {
-		hero.transform.position = heroSpawnPos;
+	IEnumerator WaitToRespawn(Vector2 pos) {
+//		hero.transform.position = heroSpawnPos;
+		hero.transform.position = pos;
 		hero.GetComponent<PlayerHealth>().SetHealth(10);
 		yield return new WaitForSeconds(2);
 		hero.SetActive(true);
+//		hero.GetComponentInChildren<GunPlayer>().ResetBullet();
 	}
 	#endregion
 
-	#region Hide Object
-	public void ShowObjects(GameObject go) {
-		go.GetComponent<TrigHideObject>().SetActiveAll(true);
+	#region End level
+	public void EndLevel() {
+		FadeScene.LoadLevel(Application.loadedLevel + 1, 1.5f, 2.0f, Color.black);
 	}
 	#endregion
 
-	#region Spawn Item
-	public void SpawnItem(Vector2 pos) {
-		PickupSpawner.Instance.SpawnItem(2, pos);
+	#region Text
+	public void ShowNotice(string text, float time) {
+
+		StartCoroutine(WaitShowNotice(text, time));
+	}
+
+	IEnumerator WaitShowNotice(string text, float time) {
+		noticeText = text;
+		yield return new WaitForSeconds(time);
+		noticeText = "";
+	}
+
+	void OnGUI() {
+
+
+		GUI.Label (new Rect (Screen.width/2 - 50, Screen.height - 50, 100, 20),
+		           noticeText, myStyle);
 	}
 	#endregion
 }

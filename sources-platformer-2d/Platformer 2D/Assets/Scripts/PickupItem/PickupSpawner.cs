@@ -7,8 +7,8 @@ public class PickupSpawner : MonoBehaviour
 	public float pickupDeliveryTime = 5f;		// Delay on delivery.
 	public float dropRangeLeft;					// Smallest value of x in world coordinates the delivery can happen at.
 	public float dropRangeRight;				// Largest value of x in world coordinates the delivery can happen at.
-	public float highHealthThreshold = 75f;		// The health of the player, above which only bomb crates will be delivered.
-	public float lowHealthThreshold = 25f;		// The health of the player, below which only health crates will be delivered.
+	public float highHealthThreshold = 6f;		// The health of the player, above which only bomb crates will be delivered.
+	public float lowHealthThreshold = 3f;		// The health of the player, below which only health crates will be delivered.
 
 
 	private PlayerHealth playerHealth;			// Reference to the PlayerHealth script.

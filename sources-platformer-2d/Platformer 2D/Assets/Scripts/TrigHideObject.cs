@@ -20,4 +20,11 @@ public class TrigHideObject : MonoBehaviour {
 			child.gameObject.SetActive(value);
 		}
 	}
+
+	void OnTriggerEnter2D(Collider2D col) {
+		if (col.tag == "Player") {
+			SetActiveAll(true);
+
+		}
+	}
 }

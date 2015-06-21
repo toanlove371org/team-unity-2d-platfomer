@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
 	public float damageGun = 1f;	// 
 	
 	protected bool isRapidFire = false;
-	private float cooldownTick = 0;
+	public float cooldownTick = 0;
 	private float FPS = 60f;
 	private Bullet bulletScript;
 	private float cooldown;

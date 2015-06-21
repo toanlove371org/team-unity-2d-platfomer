@@ -13,7 +13,7 @@ public class EnemyBaseClass : MonoBehaviour {
 	protected SpriteRenderer ren;		// Reference to the sprite renderer.
 	protected bool dead = false;		// Whether or not the enemy is dead.
 	protected Score score;				// Reference to the Score script.
-	
+	protected float hpDamage = 1;
 	
 	void Awake()
 	{
@@ -35,7 +35,7 @@ public class EnemyBaseClass : MonoBehaviour {
 	protected virtual void FixedUpdateBase () {
 		
 		// If the enemy has one hit point left and has a damagedEnemy sprite...
-		if(HP == 1 && damagedEnemy != null) {
+		if(HP == hpDamage && damagedEnemy != null) {
 			// ... set the sprite renderer's sprite to be the damagedEnemy sprite.
 			DamagedEffect();
 		}
@@ -54,6 +54,7 @@ public class EnemyBaseClass : MonoBehaviour {
 	{
 		// Reduce the number of hit points by one.
 		HP -= damage;
+		EffectWhenHitted();
 	}
 	
 	protected virtual void Death()
@@ -98,4 +99,13 @@ public class EnemyBaseClass : MonoBehaviour {
 		Instantiate(hundredPointsUI, scorePos, Quaternion.identity);
 	}
 	
+	void EffectWhenHitted () {
+		StartCoroutine(SplashColor());
+	}
+
+	IEnumerator SplashColor() {
+		ren.material.color = new Color(10, 10, 10, 0.5f);
+		yield return new WaitForSeconds(0.3f);
+		ren.material.color = new Color(255, 255, 255, 1f);
+	}
 }

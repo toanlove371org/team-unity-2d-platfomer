@@ -5,13 +5,10 @@ public class BulletPickup : PickupItem {
 
 	public GameObject bullet;
 	public Texture bulletIcon;
-
-	private BulletHUD bulletHUD;
+	public int bulletTime = 5;
 
 	protected override void AwakeBase (){
 		base.AwakeBase ();
-
-		bulletHUD = GameObject.Find("ui_bulletHUD").GetComponent<BulletHUD>();
 	}
 
 	protected override void PickupEffect (Collider2D other) {
@@ -21,7 +18,9 @@ public class BulletPickup : PickupItem {
 		                 bullet.GetComponent<Bullet>().speed,
 		                 bullet.GetComponent<Bullet>().damage);
 
-		bulletHUD.SetIcon(bulletIcon);
+
+		gunPlayer.CalBulletTime(bulletTime);
+		BulletHUD.Instance.SetIcon(bulletIcon);
 	}
 
 }

@@ -129,7 +129,7 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_FixedAngle: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -189,9 +189,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 100000, guid: 277a297289fba7842814d2252213ecab, type: 2}
   speedGun: 1
-  cooldownGun: 2
+  cooldownGun: 1.5
   direction: 0
   damageGun: 2
+  cooldownTick: 0
+  autoFire: 0
   gunRange: 10
 --- !u!114 &11463060
 MonoBehaviour:
@@ -204,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ccb05b34cd60c45997d61491d6ed70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 3
+  HP: 5
   deadEnemy: {fileID: 21300000, guid: 73fa5f80d4ddd4196b767cc01c1b5c68, type: 3}
   damagedEnemy: {fileID: 21300000, guid: 73fa5f80d4ddd4196b767cc01c1b5c68, type: 3}
   deathClips:

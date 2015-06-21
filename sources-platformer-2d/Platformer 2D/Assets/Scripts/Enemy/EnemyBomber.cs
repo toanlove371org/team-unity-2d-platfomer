@@ -59,14 +59,14 @@ public class EnemyBomber : EnemyBaseClass {
 	{
 		base.Death ();
 		// Allow the enemy to rotate and spin it by adding a torque.
-		GetComponent<Rigidbody2D>().fixedAngle = false;
-		GetComponent<Rigidbody2D>().AddTorque(Random.Range(deathSpinMin,deathSpinMax));
-		GetComponent<Rigidbody2D>().mass = 1;
-		GetComponent<Rigidbody2D>().gravityScale = 1f;
+		this.gameObject.GetComponent<Rigidbody2D>().fixedAngle = false;
+		this.gameObject.GetComponent<Rigidbody2D>().AddTorque(Random.Range(deathSpinMin,deathSpinMax));
+		this.gameObject.GetComponent<Rigidbody2D>().mass = 1;
+		this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1f;
 		if (this.transform.FindChild("gun")) {
 			this.transform.FindChild("gun").gameObject.SetActive(false);
 		}
-		Destroy(this.gameObject, 2f);
+		Destroy(this.gameObject, 3f);
 	}
 	
 	public void Flip()

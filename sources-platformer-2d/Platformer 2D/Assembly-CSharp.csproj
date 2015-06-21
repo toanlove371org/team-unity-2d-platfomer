@@ -52,13 +52,17 @@
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\ChangeDirection.cs" />
      <Compile Include="Assets\Scripts\Destroyer.cs" />
+     <Compile Include="Assets\Scripts\DialogTooltip.cs" />
+     <Compile Include="Assets\Scripts\Enemy\BossUFO.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBaseClass.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBomber.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBullet.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyGun.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyRocket.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyTower.cs" />
      <Compile Include="Assets\Scripts\Enemy\GunFlying.cs" />
+     <Compile Include="Assets\Scripts\FadeScene.cs" />
      <Compile Include="Assets\Scripts\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\GameTrigger.cs" />
      <Compile Include="Assets\Scripts\Gold.cs" />
@@ -79,6 +83,7 @@
      <Compile Include="Assets\Scripts\PlayerBullet\MultiDirecBullet.cs" />
      <Compile Include="Assets\Scripts\PlayerBullet\PlayerBullet.cs" />
      <Compile Include="Assets\Scripts\PlayerBullet\Rocket.cs" />
+     <Compile Include="Assets\Scripts\PlayerBullet\TwoSideBullet.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Remover.cs" />
@@ -88,6 +93,8 @@
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\TrigCheckDestroyed.cs" />
      <Compile Include="Assets\Scripts\TrigHideObject.cs" />
+     <Compile Include="Assets\Scripts\TrigMoveHero.cs" />
+     <Compile Include="Assets\Scripts\TrigSpawnItem.cs" />
      <Compile Include="Assets\Scripts\UI\BulletHUD.cs" />
      <Compile Include="Assets\Scripts\UI\WeaponHUD.cs" />
  <Reference Include="UnityEngine.UI">

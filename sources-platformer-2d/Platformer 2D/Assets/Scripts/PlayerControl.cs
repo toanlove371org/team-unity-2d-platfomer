@@ -41,7 +41,7 @@ public class PlayerControl : MonoBehaviour
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));  
 
 		// If the jump button is pressed and the player is grounded then the player should jump.
-		if(Input.GetKeyDown(KeyCode.Space) && grounded)
+		if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.L)) && grounded)
 			jump = true;
 
 
@@ -177,13 +177,11 @@ public class PlayerControl : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D col) {
 		switch(col.tag) {
 		case "CheckPoint":
-			GameTrigger.Instance.SetHeroSpawnPos(col.gameObject.transform.position);
-			break;
-		case "TriggerHide":
-			GameTrigger.Instance.ShowObjects(col.gameObject);
-			break;
-		case "TriggerItem":
-			GameTrigger.Instance.SpawnItem(col.gameObject.transform.position);
+			if (col.name == "CheckPoint_End") {
+				GameTrigger.Instance.EndLevel();
+			} else {
+				GameTrigger.Instance.SetHeroSpawnPos(col.gameObject.transform.position);
+			}
 			break;
 		}
 	}

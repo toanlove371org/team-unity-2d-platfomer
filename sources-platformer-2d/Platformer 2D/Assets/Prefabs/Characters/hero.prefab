@@ -368,7 +368,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.8100004, y: -7.30000019, z: -1}
+  m_LocalPosition: {x: 177.199997, y: -.100000001, z: -1}
   m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
   m_Children:
   - {fileID: 400026}
@@ -753,6 +753,7 @@ MonoBehaviour:
   cooldownGun: 1
   direction: 0
   damageGun: 1
+  cooldownTick: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -834,6 +835,9 @@ MonoBehaviour:
   cooldownGun: .25
   direction: 0
   damageGun: 1
+  cooldownTick: 0
+  defaultBullet: {fileID: 100000, guid: 8fde8ec1b330d4bbfb4839f4b41cadc0, type: 2}
+  timeBullet: 0
 --- !u!114 &11496848
 MonoBehaviour:
   m_ObjectHideFlags: 1

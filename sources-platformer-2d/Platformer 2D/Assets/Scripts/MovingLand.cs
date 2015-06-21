@@ -8,6 +8,7 @@ public class MovingLand : MonoBehaviour {
 	public float freezTime = 1f;
 
 	private float speedTemp;
+	private bool isTriggered;
 
 	// Use this for initialization
 	void Start () {
@@ -32,8 +33,17 @@ public class MovingLand : MonoBehaviour {
 			if (col.GetComponent<ChangeDirection>()) {
 				direction = col.GetComponent<ChangeDirection>().direction;
 			} else {
-				direction = direction + 180;
+				if(!isTriggered) {
+					direction = direction + 180;
+					isTriggered = true;
+				}
 			}
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D col) {
+		if(col.tag=="ChangeDirection") {
+			isTriggered = false;
 		}
 	}
 

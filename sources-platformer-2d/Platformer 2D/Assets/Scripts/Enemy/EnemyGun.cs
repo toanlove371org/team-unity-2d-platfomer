@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class EnemyGun : Gun {
-	
+
+	public bool autoFire = false;
+
 	protected bool seeTarget;
 	protected Transform target;
 	protected GameObject enemyParent;
@@ -19,22 +21,27 @@ public class EnemyGun : Gun {
 	}
 	
 	protected virtual void SetDirection() {
-		if (seeTarget) {
-			if (enemyParent.GetComponent<EnemyBomber>()) {
-				if (enemyParent.GetComponent<EnemyBomber>().isFacingRight) {
-					direction = 0;
+		if (autoFire == false) {
+			if (seeTarget) {
+				if (enemyParent.GetComponent<EnemyBomber>()) {
+					if (enemyParent.GetComponent<EnemyBomber>().isFacingRight) {
+						direction = 0;
+					}
+					else {
+						direction = 180;
+					}
 				}
-				else {
-					direction = 180;
-				}
+	//			else if (enemyParent.GetComponent<EnemyTower>()) {
+	//				direction = 180;
+	//			}
+				isRapidFire = true;
 			}
-//			else if (enemyParent.GetComponent<EnemyTower>()) {
-//				direction = 180;
-//			}
-			isRapidFire = true;
+			else {
+				isRapidFire = false;
+			}
 		}
 		else {
-			isRapidFire = false;
+			isRapidFire = true;
 		}
 	}
 	

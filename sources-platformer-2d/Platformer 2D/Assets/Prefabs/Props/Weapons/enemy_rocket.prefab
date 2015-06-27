@@ -76,8 +76,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: .00185931881, w: .999998271}
-  m_LocalPosition: {x: 498.73999, y: 4.44000006, z: -8.68999958}
-  m_LocalScale: {x: 10, y: 14, z: 10}
+  m_LocalPosition: {x: .469999999, y: 2.74000001, z: -8.68999958}
+  m_LocalScale: {x: 9.76000023, y: 11.2600002, z: 10}
   m_Children:
   - {fileID: 400002}
   - {fileID: 400004}
@@ -103,8 +103,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.279000014, y: -.0109999999, z: 0}
-  m_LocalScale: {x: .0500000007, y: .0500000007, z: .0500000007}
+  m_LocalPosition: {x: -.250999987, y: -0, z: 0}
+  m_LocalScale: {x: .0399999991, y: .0299999993, z: .0500000007}
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 1
@@ -115,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: .707065284, y: .00764448289, z: -.00764448103, w: -.707065642}
-  m_LocalPosition: {x: -.100000001, y: .00400000019, z: 0}
+  m_LocalPosition: {x: -.193000004, y: .00200000009, z: 0}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6c4be1088188b488edb530c114db1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 100000, guid: b83a8686f8d4c184596dc11b69ff99c3, type: 2}
+  explosion: {fileID: 100000, guid: 42404bf7d14c342f69690c9961a7530d, type: 2}
   speed: 10
   damage: 3
   cooldown: 2

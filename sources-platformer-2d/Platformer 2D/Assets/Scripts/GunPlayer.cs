@@ -7,7 +7,7 @@ public class GunPlayer : Gun {
 	private Animator anim;					// Reference to the Animator component.
 	
 	public GameObject defaultBullet;
-	public int timeBullet;
+	public float timeBullet;
 
 	void Awake()
 	{
@@ -74,7 +74,7 @@ public class GunPlayer : Gun {
 		base.Fire();
 	}
 
-	public void CalBulletTime(int time) {
+	public void CalBulletTime(float time) {
 		if (timeBullet == 0) {
 			timeBullet = time;
 			StartCoroutine(RunBulletTime());
@@ -86,9 +86,9 @@ public class GunPlayer : Gun {
 	IEnumerator RunBulletTime() {
 		if (timeBullet > 0) {
 
-			timeBullet--;
+			timeBullet-=0.2f;
 			BulletHUD.Instance.SetTime(timeBullet);
-			yield return new WaitForSeconds(1);
+			yield return new WaitForSeconds(0.2f);
 			StartCoroutine(RunBulletTime());
 		}
 		else {

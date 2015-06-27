@@ -102,11 +102,11 @@ public class PlayerHealth : MonoBehaviour
 	void Dead () {
 		#region Dead animation
 //		// Find all of the colliders on the gameobject and set them all to be triggers.
-//		Collider2D[] cols = GetComponents<Collider2D>();
-//		foreach(Collider2D c in cols)
-//		{
-//			c.isTrigger = true;
-//		}
+		Collider2D[] cols = GetComponents<Collider2D>();
+		foreach(Collider2D c in cols)
+		{
+			c.isTrigger = true;
+		}
 //		
 //		// Move all sprite parts of the player to the front
 //		SpriteRenderer[] spr = GetComponentsInChildren<SpriteRenderer>();
@@ -115,16 +115,35 @@ public class PlayerHealth : MonoBehaviour
 //			s.sortingLayerName = "UI";
 //		}
 //		
-//		// ... disable user Player Control script
-//		GetComponent<PlayerControl>().enabled = false;
-//		
-//		// ... disable the Gun script to stop a dead guy shooting a nonexistant bazooka
-//		GetComponentInChildren<Gun>().enabled = false;
+		// ... disable user Player Control script
+		GetComponent<PlayerControl>().enabled = false;
+		
+		// ... disable the Gun script to stop a dead guy shooting a nonexistant bazooka
+		GetComponentInChildren<Gun>().enabled = false;
 //		
 //		// ... Trigger the 'Die' animation state
 //		anim.SetTrigger("Die");
 		#endregion
 
-		GameTrigger.Instance.RespawnHero();
+//		GameTrigger.Instance.RespawnHero();
+//		StartCoroutine(WaitToRespawn());
+	}
+
+	IEnumerator WaitToRespawn() {
+		Collider2D[] cols = GetComponents<Collider2D>();
+		foreach(Collider2D c in cols)
+		{
+			c.isTrigger = true;
+		}
+		// ... disable user Player Control script
+		GetComponent<PlayerControl>().enabled = false;
+		yield return new WaitForSeconds(0.1f);
+		foreach(Collider2D c in cols)
+		{
+			c.isTrigger = false;
+		}
+		// ... enable user Player Control script
+		GetComponent<PlayerControl>().enabled = true;
+		//GameTrigger.Instance.RespawnHero();
 	}
 }

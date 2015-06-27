@@ -91,6 +91,8 @@
      <Compile Include="Assets\Scripts\ScoreShadow.cs" />
      <Compile Include="Assets\Scripts\SetParticleSortingLayer.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\StartScreenCtrl.cs" />
+     <Compile Include="Assets\Scripts\TrigCheckDestroyExtend.cs" />
      <Compile Include="Assets\Scripts\TrigCheckDestroyed.cs" />
      <Compile Include="Assets\Scripts\TrigHideObject.cs" />
      <Compile Include="Assets\Scripts\TrigMoveHero.cs" />

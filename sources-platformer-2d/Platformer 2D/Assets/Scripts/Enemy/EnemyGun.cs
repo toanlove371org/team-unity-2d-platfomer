@@ -8,7 +8,7 @@ public class EnemyGun : Gun {
 	protected bool seeTarget;
 	protected Transform target;
 	protected GameObject enemyParent;
-	
+
 	protected override void StartBase () {
 		base.StartBase();
 		enemyParent = this.transform.parent.gameObject;
@@ -18,6 +18,8 @@ public class EnemyGun : Gun {
 		base.UpdateBase ();
 		
 		SetDirection();
+
+
 	}
 	
 	protected virtual void SetDirection() {

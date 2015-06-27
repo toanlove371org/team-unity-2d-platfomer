@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour
 
 
 	private Transform player;		// Reference to the player's transform.
-
+	float marginTemp = 5f;
 
 	void Awake ()
 	{
@@ -24,7 +24,7 @@ public class CameraFollow : MonoBehaviour
 	bool CheckXMargin()
 	{
 		// Returns true if the distance between the camera and the player in the x axis is greater than the x margin.
-		return Mathf.Abs(transform.position.x - player.position.x - 10f) > xMargin;
+		return Mathf.Abs(transform.position.x - player.position.x - marginTemp) > xMargin;
 	}
 
 
@@ -50,7 +50,7 @@ public class CameraFollow : MonoBehaviour
 		// If the player has moved beyond the x margin...
 		if(CheckXMargin())
 			// ... the target x coordinate should be a Lerp between the camera's current x position and the player's current x position.
-			targetX = Mathf.Lerp(transform.position.x, player.position.x + 10f, xSmooth * Time.deltaTime);
+			targetX = Mathf.Lerp(transform.position.x, player.position.x + marginTemp, xSmooth * Time.deltaTime);
 
 		// If the player has moved beyond the y margin...
 		if(CheckYMargin())

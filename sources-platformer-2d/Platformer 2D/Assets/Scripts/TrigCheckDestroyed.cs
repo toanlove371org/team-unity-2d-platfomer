@@ -29,9 +29,13 @@ public class TrigCheckDestroyed : MonoBehaviour {
 
 	private void CheckCondition() {
 		if (CheckDestroyAll()) {
-			Destroy(objAction);
-			Destroy(this.gameObject);
+			Action();
 		}
+	}
+
+	protected virtual void Action() {
+		Destroy(objAction);
+		Destroy(this.gameObject);
 	}
 
 //	void OnTriggerEnter2D(Collider2D col) {

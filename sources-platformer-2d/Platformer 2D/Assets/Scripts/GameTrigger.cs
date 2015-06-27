@@ -31,7 +31,8 @@ public class GameTrigger : MonoBehaviour {
 		myStyle.font = font;
 		myStyle.fontSize = 40;
 		myStyle.alignment = TextAnchor.MiddleCenter;
-		myStyle.normal.textColor = Color.white;
+		myStyle.normal.textColor = Color.blue;
+		
 	}
 	
 	// Update is called once per frame
@@ -45,6 +46,16 @@ public class GameTrigger : MonoBehaviour {
 	}
 
 	public void RespawnHero() {
+		Collider2D[] cols = hero.GetComponents<Collider2D>();
+		foreach(Collider2D c in cols)
+		{
+			c.isTrigger = false;
+		}
+		// ... disable user Player Control script
+		hero.GetComponent<PlayerControl>().enabled = true;
+		// ... disable the Gun script to stop a dead guy shooting a nonexistant bazooka
+		hero.GetComponentInChildren<GunPlayer>().enabled = true;
+
 		hero.GetComponentInChildren<GunPlayer>().ResetBullet();
 		hero.SetActive(false);
 		StartCoroutine(WaitToRespawn(heroSpawnPos));

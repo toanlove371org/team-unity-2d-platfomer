@@ -5,7 +5,7 @@ public class BulletPickup : PickupItem {
 
 	public GameObject bullet;
 	public Texture bulletIcon;
-	public int bulletTime = 5;
+	public float bulletTime = 45;
 
 	protected override void AwakeBase (){
 		base.AwakeBase ();

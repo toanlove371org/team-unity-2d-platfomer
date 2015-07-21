@@ -1,0 +1,175 @@
+[33mcommit 32b99825c5fffe374c58addf7fe05e8e417bce10[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Sat Jun 27 13:23:38 2015 +0700
+
+    Change some things, fix more bugs
+
+[33mcommit 6b56bd875615130edc6e0741d80b4bc6c43d1db5[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Sun Jun 21 15:33:29 2015 +0700
+
+    Fix all and redesign
+
+[33mcommit d35c53209788e8f20480dbac36f835a7ef7e11a6[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Fri Jun 5 20:20:28 2015 +0700
+
+    Add new Level
+
+[33mcommit 354217308144633b411b8bcb9f111f81ab46a1a0[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Wed May 20 21:21:16 2015 +0700
+
+    Fix some bug
+
+[33mcommit ef4f3830cd8a32e012fcc68232b5766a3f474701[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Tue May 19 18:40:42 2015 +0700
+
+    Add details to Level_4
+
+[33mcommit 42b2a80d6237f9a9ca19decd921261c2800c79d6[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Wed May 13 23:46:56 2015 +0700
+
+    Add Level_4, fix some bug
+
+[33mcommit 01f691bd7b33c4609d1a574cd9865202ec41f42d[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Tue May 5 20:59:44 2015 +0700
+
+    Fix EnemyBomber.cs
+    
+    Dead()
+
+[33mcommit bea09872b01aec142a590095d0d7d4d90ed9e418[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Wed Apr 22 23:46:56 2015 +0700
+
+    Fix GunFlying.cs
+
+[33mcommit 8a25821b63006a4416a472d48bcb799da7e7c068[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Mon Apr 20 21:45:41 2015 +0700
+
+    Add new EnemyFlying, change something
+
+[33mcommit 2b98164f17b88ee3f566e8fe3f4dd95657711d49[m
+Author: langtuyet99 <onlymepro@gmail.com>
+Date:   Thu Apr 16 08:45:55 2015 +0700
+
+    update 16/4
+    
+    update 16/4
+
+[33mcommit d840bf1a20613a6158bcc79e9ebdd17a7042aad7[m
+Author: langtuyet99 <onlymepro@gmail.com>
+Date:   Wed Apr 15 22:40:39 2015 +0700
+
+    level2
+    
+    them level
+
+[33mcommit 572e07443238273427f2646974b7416f69663456[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Wed Apr 15 21:12:37 2015 +0700
+
+    Add BulletHUD.cs, level design, ...
+
+[33mcommit d5f0af605a707a9ae251ba0e0e534f4a93a71727[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Wed Apr 15 18:10:15 2015 +0700
+
+    Add detail to weapon,  fix some class
+
+[33mcommit f86b2b3570788ceef39672dd9f68d764d722d2d1[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Wed Apr 15 16:50:40 2015 +0700
+
+    Delete enemy3.prefab
+
+[33mcommit 7b37ad31497bf536c708405b5a7c7b4fe9664ebc[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Wed Apr 15 16:49:35 2015 +0700
+
+    Add new enemy : EnemyMachineGun
+    
+    Prefab : enemyMachingun
+    Script : EnemyMachinGun.cs
+
+[33mcommit 682611883bb6d737b06f2a10f262eb84a861dec6[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Wed Apr 15 13:39:10 2015 +0700
+
+    Add WeaponHUD.cs
+    
+    Giao dien vu khi phu, hien thi khi nhat bom, ten lua
+
+[33mcommit 2ec2c5f7143e05834c9c850fa466a6f8b10eaceb[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Wed Apr 15 11:04:47 2015 +0700
+
+    Change scene Level_1.unity
+
+[33mcommit a460498bcb11b8be76935f8a9aaaa76e6825d1a1[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Tue Apr 14 16:25:45 2015 +0700
+
+    Add new Special Weapon
+
+[33mcommit e36177f28eb3efda41bac9e5c1ddce9cd80ab907[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Tue Apr 14 08:20:56 2015 +0700
+
+    Add class MovingLand.cs, design level_1.scene
+
+[33mcommit 08d7493a45e24a95e730bc3ffd44a68e4a6e029b[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Mon Apr 13 16:41:20 2015 +0700
+
+    Add parents class, add new bullet
+    
+    - Them class cha Gun.cs (GunPlayer.cs, EnemyGun.cs)
+    - Them class cha Bullet.cs(EnemyBullet.cs, PlayerBullet.cs
+    (MultiDirecBullet.cs) )
+
+[33mcommit e62fe50a09bd8f5854b7994fb197c98d0bd740bf[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Mon Apr 13 13:37:17 2015 +0700
+
+    Add parents class
+    
+    - Them class cha Bullet.cs, cac lop con ke thua la EnemyBullet.cs,
+    Rocket.cs
+
+[33mcommit 07513b1cf94aab7f075782ba358e3fcdba758c9e[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Mon Apr 13 09:53:39 2015 +0700
+
+    Edit Read me.txt
+    
+    Demo description
+
+[33mcommit 0d94ff83d152133aef2d103d41b04f86dd4facd7[m
+Author: langtuyet99 <onlymepro@gmail.com>
+Date:   Mon Apr 13 09:47:25 2015 +0700
+
+    demo
+    
+    them file alo alo 1234.txt
+
+[33mcommit a2266263b71f6e1dc7b64528b3a0c938a836773f[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Mon Apr 13 09:40:08 2015 +0700
+
+    Add README.md file
+    
+    Information about this repo
+
+[33mcommit faa6ed034c6ed1362569194b9f0654fe35da2ec1[m
+Author: toanlove371 <toanlove371@gmail.com>
+Date:   Mon Apr 13 09:38:17 2015 +0700
+
+    Add original source code "Unity 2D platformer"
+    
+    Simple 2D project of Unity
